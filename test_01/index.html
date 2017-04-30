@@ -40,6 +40,32 @@
 		<!-- 第2問 -->
 		<section>
 			<h2>2. ユーザー登録</h2>
+			<button id="new_user">新規登録</button>
+			<div id="dialog" class="dialog">
+				<div>
+					<h3>ユーザー登録</h3>
+					<form id="form" action="/" method="post">
+						<dl>
+							<dt><label for="nickname">ニックネーム</label></dt>
+							<dd><input type="text" name="nicknaame" id="nickname" /></dd>
+						</dl>
+						<dl>
+							<dt><label for="mail_address">メールアドレス</label></dt>
+							<dd><input type="text" name="mail_address" id="mail_address"/></dd>
+						</dl>
+						<dl>
+							<dt><label for="password">パスワード</label></dt>
+							<dd><input type="password" name="password" id="password"/></dd>
+						</dl>
+						<dl>
+							<dt><label for="conf_password">確認用</label></dt>
+							<dd><input type="password" name="conf_password" id="conf_password"/></dd>
+						</dl>
+						<button id="cancel" class="cancel">戻る</button>
+						<button id="submit" class="submit">送信</button>
+					</form>
+				</div>
+			</div>
 		</section>
 		<!-- 第3問 -->
 		<section>

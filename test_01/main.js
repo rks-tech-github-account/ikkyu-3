@@ -90,3 +90,24 @@ function calc(){
     result = Math.ceil((inputLeft / inputRight)*100)/100;
   }
 }
+
+/* 第2問 */
+window.onload = function(){
+  /* クリックイベントを登録 */
+  // 「新規登録」ボタンがクリックされた時の関数
+  document.getElementById('new_user').addEventListener('click', function(e){
+    e.preventDefault();
+    document.getElementById('dialog').style.display = "block";
+  });
+  // 「送信」ボタンがクリックされた時の関数
+  document.getElementById('submit').addEventListener('click', function(e){
+    e.preventDefault();
+    const form = document.getElementById('form');
+    console.log(form);
+  });
+  // 「キャンセル」ボタンがクリックされた時の関数
+  document.getElementById('cancel').addEventListener('click', function(e){
+    e.preventDefault();
+    document.getElementById('dialog').style.display = "none";
+  });
+};
