@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="style.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="main.js"></script>
+		<title>SKILL CHECK TEST</title>
+	</head>
+	<body>
+		<header>
+			<h1>JavaScriptスキルテスト</h1>
+		</header>
+		<!-- 第1問 -->
+		<section id="test1">
+			<h2>1. 計算ツール</h2>
+			<p>計算方法を選択してください</p>
+			<div class="selectArea">
+				<button class="calcModeButton selectedMode" value="0"
+					onclick="clickSelectedCalcMode(this);">＋</button>
+				<button class="calcModeButton" value="1"
+					onclick="clickSelectedCalcMode(this);">−</button>
+				<button class="calcModeButton" value="2"
+					onclick="clickSelectedCalcMode(this);">×</button>
+				<button class="calcModeButton" value="3"
+					onclick="clickSelectedCalcMode(this);">÷</button>
+			</div>
+			<p>値を入力してください</p>
+			<div class="calcArea">
+				<input id="calcLeft" type="text" onkeydown="keyDown(event);"/>
+				<div class="calcMode">
+					<span id="calcMode">+</span>
+				</div>
+				<input id="calcRight" type="text" onkeydown="keyDown(event);"/>
+				<button id="calcExecute" onclick="executeCalc();">計算</button>
+			</div>
+			<p>結果(少数は第2位まで表示。端数は切り上げで表示されます。)</p>
+			<div id="calcResult" class="calcResult"></div>
+		</section>
+		<!-- 第2問 -->
+		<section>
+			<h2>2. ユーザー登録</h2>
+		</section>
+		<!-- 第3問 -->
+		<section>
+			<h2>3. ajax通信</h2>
+		</section>
+
+	</body>
+</html>
