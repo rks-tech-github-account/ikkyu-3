@@ -10,6 +10,9 @@ h1{
 h2{
 	border-bottom: 1px solid lightgray;
 }
+table, th, td{
+	border: 1px solid lightgray;
+}
 /*計算方法選択エリア*/
 div.selectArea{
 	display: flex;
