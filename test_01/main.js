@@ -54,7 +54,6 @@ var var1 = 'hoge';
 // 1. ReferenceError
 // 2. undefined
 // 3. hoge
-// 正解：2 ・・・varで変数宣言すると「巻き上げ」が作用される
 
 /**
  * 第2問 関数定義
