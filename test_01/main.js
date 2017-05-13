@@ -92,7 +92,7 @@ function fun6(){
 // 正解：2
 
 /**
- * 第4問 バグ探し
+ * 第3問 バグ探し
  * バグを指摘してください。
  * 一つの問題に複数のバグがあるかもしれません。
  */
@@ -126,17 +126,19 @@ if(value==10){
 }
 
 // (3)
-// *この問題を解くためには、非同期処理の知識が必要です。
+// この問題を解くためには、非同期処理の知識が必要です。
+// 非同期通信で本の情報一覧を取得し、テーブルを更新しますがうまく表示できません。
+// 表示できるように、改修方法を答えてください。
 /**
  * 解答例
  * データ取得処理が非同期なため、テーブルに反映する処理が、データ取得処理の完了前に行われてしまう可能性がある。
  * doneの中でtbodyの更新処理を行えばよい。
  */
-
 $(function(){
 	const $tbody = $('#tbody');
 	let html = '';
 
+	// 正解例
 	$('#ajaxBtn').on('click', function(){
 		$.ajax({
 			method : 'GET',
@@ -152,7 +154,35 @@ $(function(){
 			alert('ajax error!');
 		});
 	});
+
 });
+
+// 問題
+// $(function(){
+// 	const $tbody = $('#tbody');
+// 	let html = '';
+// 	let data = null;
+//
+// 	// 非同期通信
+// 	$('#ajaxBtn').on('click', function(){
+// 		$.ajax({
+// 			method : 'GET',
+// 			url : 'data.json',
+// 			dataType : 'json',
+// 			timeout : 5000,
+// 		}).done(function(arr_data){
+// 			data = arr_data;
+// 		}).fail(function(){
+// 			alert('ajax error!');
+// 		});
+// 	});
+//
+// 	// テーブルに反映
+// 	data.forEach(function(value, index, array){
+// 		html += createTRow(value);
+// 	});
+// 	$tbody.append(html);
+// });
 
 function createTRow(rowData){
 	return `<tr>` +
